@@ -1,5 +1,148 @@
 # Administración de la información y  de software de base en sistemas Linux.
 
+## 1. Los sistemas operativos Linux. Características. Historia.
+
+### Historia de Linux
+
+#### Richard Stallman. GNU
+
+En 1983 Richard Stallman tras trabajar con unix, el cual es un sistema operativo propietario de los Laboratorios Bell de AT&T, Stallman empieza a tener problemas con este sistema operativo, ya que no podía modificarlo, mejorarlo o adaptarlo a sus necesidades.
+
+Por este motivo inició el proyecto GNU, acrónimo de GNU is NOT UNIX, con la idea de crear software libre, que cada programador pudiera modificar si así lo quisiera y que fuera compatible con unix.
+
+Esto motivó a muchos desarrolladores a crear programas y aplicaciones independientes de software libre y en pocos años se había desarrollado prácticamente un S.O. completamente libre. Sin embargo, aún faltaba el kernel.
+
+#### Linus Torvalds. Inicios de Linux
+
+Esta última parte la realizó Linus Torvalds, estudiante de informática en la universidad de Helsinki.
+
+Entró en la universidad en 1988, año en el que se empezó a utilizar también Minix, este S.O. estaba basado en Unix pero se desarrolló con una intención didáctica. El problema es que, su creador Andy Tannenbaum, no tuvo en cuenta en ningún momento asociar Minix al proyecto GNU, decidió ceder sus derechos y empezaron a cobrar 150 dólares por licencia, lo cual era un precio alto para los estudiantes a los que iba dirigido.
+
+Linus, que formaba parte de la comunidad de Minix, decidió crear un nuevo kernel de Unix con la filosofía de GNU. Basándose en el de Minix, fue modificando progresivamente para que fuera capaz de ejecutar aplicaciones GNU.
+
+La primera versión de Linux 0.02  se hizo pública en 1991, el cual ya contaba con un compilador de C, pero poco más funcionaba. En posteriores versiones se unieron más programadores al proyecto a través de internet y después de de un tiempo se llegó a la versión 1.0 en 1994.
+
+
+### Sistemas operativos Linux
+
+Se conoce como  sistemas operativos Linux, aquellos que se han desarrollado a partir del kernel o núcleo de Linux y con la filosofía GNU.
+
+Existen múltiples distribuciones de Linux. Algunas de las más conocidas pueden ser Ubuntu, Debian o Fedoraç, por poner algunos ejemplos.
+
+### Características
+
+
+* Multitarea: La palabra multitarea describe la habilidad de ejecutar varios programas al mismo tiempo. LINUX utiliza la llamada multitarea preventiva, la cual asegura que todos los programas que se están utilizando en un momento dado serán ejecutados, siendo el sistema operativo el encargado de ceder tiempo de microprocesador a cada programa.
+
+* Multiusuario: Muchos usuarios usando la misma máquina al mismo tiempo.
+
+* Multiplataforma: Las plataformas en las que en un principio se puede utilizar Linux son 386-, 486-. Pentium, Pentium Pro, Pentium II,Amiga y Atari, tambien existen versiones para su utilización en otras plataformas, como Alpha, ARM,MIPS, PowerPC y SPARC.
+
+* Multiprocesador: Soporte para sistemas con más de un procesador esta disponible para Intel y SPARC.
+
+
+* Protección de la memoria entre procesos, de manera que uno de ellos no pueda colgar el sistema.
+
+
+* Carga de ejecutables por demanda: Linux sólo lee del disco aquellas partes de un programa que están siendo usadas actualmente.
+
+
+* Política de copia en escritura para la compartición de páginas entre ejecutables: esto significa que varios procesos pueden usar la misma zona de memoria para ejecutarse. Cuando alguno intenta escribir en esa memoria, la página (4Kb de memoria) se copia a otro lugar. Esta política de copia en escritura tiene dos beneficios: aumenta la velocidad y reduce el uso de memoria.
+
+
+* Memoria virtual usando paginación (sin intercambio de procesos completos) a disco: A una partición o un archivo en el sistema de archivos, o ambos, con la posibilidad de añadir más áreas de intercambio sobre la marcha Un total de 16 zonas de intercambio de 128Mb de tamaño máximo pueden ser usadas en un momento dado con un límite teórico de 2Gb para intercambio. Este límite se puede aumentar fácilmente con el cambio de unas cuantas líneas en el código fuente.
+
+
+* La memoria se gestiona como un recurso unificado para los programas de usuario y para el caché de disco, de tal forma que toda la memoria libre puede ser usada para caché y ésta puede a su vez ser reducida cuando se ejecuten grandes programas.
+
+
+* Todo el código fuente está disponible, incluyendo el núcleo completo y todos los drivers, las herramientas de desarrollo y todos los programas de usuario; además todo ello se puede distribuir libremente. Hay algunos programas comerciales que están siendo ofrecidos para Linux actualmente sin código fuente, pero todo lo que ha sido gratuito sigue siendo gratuito.
+
+
+* Control de tareas POSIX.
+
+
+* Pseudo-terminales (pty's).
+
+
+* Emulación de 387 en el núcleo, de tal forma que los programas no tengan que hacer su propia emulación matemática. Cualquier máquina que ejecute Linux parecerá dotada de coprocesador matemático. Por supuesto, si el ordenador ya tiene una FPU (unidad de coma flotante), esta será usada en lugar de la emulación, pudiendo incluso compilar tu propio kernel sin la emulación matemática y conseguir un pequeño ahorro de memoria.
+
+
+* Soporte para muchos teclados nacionales o adaptados y es bastante fácil añadir nuevos dinámicamente.
+
+
+* Consolas virtuales múltiples: varias sesiones de login a través de la consola entre las que se puede cambiar con las combinaciones adecuadas de teclas (totalmente independiente del hardware de video). Se crean dinámicamente y puedes tener hasta 64.
+
+
+* Soporte para varios sistemas de archivo comunes, incluyendo minix-1, Xenix y todos los sistemas de archivo típicos de System V, y tiene un avanzado sistema de archivos propio con una capacidad de hasta 4 Tb y nombres de archivos de hasta 255 caracteres de longitud.
+
+
+* Acceso transparente a particiones MS-DOS (o a particiones OS/2 FAT) mediante un sistema de archivos especial: no es necesario ningún comando especial para usar la partición MS-DOS, esta parece un sistema de archivos normal de Unix (excepto por algunas restricciones en los nombres de archivo, permisos, y esas cosas). Las particiones comprimidas de MS-DOS 6 no son accesibles en este momento, y no se espera que lo sean en el futuro. El soporte para VFAT (WNT, Windows 95) ha sido añadido al núcleo de desarrollo y estará en la próxima versión estable.
+
+
+
+
+
+
+
+
+
+## 2. Sistemas de archivos de Linux.
+
+Los sistemas de archivos son métodos que utiliza un sistema operativo para localizar los archivos de un disco o partición. Es decir, es la manera en la que se organizan los archivos del disco.
+
+La diferencia entre un disco y el sistema de archivos que contiene es importante, ya que hay pocos programas que trabajan directamente sobre los sectores crudos del disco, salvo los que crean sistemas de archivos o particiones. La mayoría de los programas trabajan  sobre un sistema de archivos concreto.
+
+La mayoría de los sistema de archivos UNIX tienen una estructura general parecida, aunque los detalles exactos pueden variar un poco. Los conceptos centrales son superbloque, nodo-i, bloque de datos, bloque de directorio, y bloque de indirección. El superbloque tiene información del sistema de archivos en conjunto, como su tamaño (la información precisa aquí depende del sistema de archivos). Un nodo-i tiene toda la información de un archivo, salvo su nombre. El nombre se almacena en el directorio, junto con el número de nodo-i. Una entrada de directorio consiste en un nombre de archivo y el número de nodo-i que representa al archivo. El nodo-i contiene los números de varios bloques de datos, que se utilizan para almacenar los datos en el archivo. Sólo hay espacio para unos pocos números de bloques de datos en el nodo-i; en cualquier caso, si se necesitan más, más espacio para punteros a los bloques de datos son colocados de forma dinámica. Estos bloques colocados dinámicamente son bloques indirectos; el nombre indica que para encontrar el bloque de datos, primero hay que encontrar su número en un bloque indirecto.
+
+Los sistemas de archivos más utilizados en linux son ext2, ext3, ext4 ReiserFS, XFS, JFS, UFS, ISO9660 y también cuenta con compatibilidad de sistemas de archivos de Windows como FAT, FAT32 o NTFS.
+
+
+
+
+
+
+
+
+
+
+## 3. Rutas y nombres de archivos. Estructura jerárquica.
+
+### Estructura jerárquica.
+
+El estándar de jerarquía del sistema de archivos (o FHS, del inglés Filesystem Hierarchy Standard) es una norma que define los directorios principales y sus contenidos en el sistema operativo GNU/Linux y otros sistemas de la familia Unix. Se diseñó originalmente en 1994 para estandarizar el sistema de archivos de las distribuciones de Linux, basándose en la tradicional organización de directorios de los sistemas Unix. En 1995 se amplió el ámbito del estándar a cualquier Unix que se adhiriese voluntariamente.
+
+FHS no es más que un documento guía, es decir, cualquier fabricante de software independiente o cualquier persona que decida crear una nueva distribución GNU/Linux, podrá aplicarlo o no a la estructura del sistema de archivos, con la ventaja de que si lo integra en el sistema, el entorno de éste será mucho más compatible con la mayoría de las distribuciones.
+
+Es importante saber que el estándar FHS es en cierto modo flexible, es decir, existe cierta libertad en el momento de aplicar las normas. De ahí que existan en la actualidad leves diferencias entre distribuciones GNU/Linux.
+
+### Rutas y nombres de archivos.
+
+Linux organiza ficheros y carpetas en un estructura de árbol. Un fichero está siempre en una carpeta, y una carpeta puede contener ficheros y subcarpetas. La carpeta de más alto nivel en esta jerarquía en Linux siempre tiene el nombre “/”.
+
+Todo fichero o carpeta tiene una ruta absoluta que es la secuencia de carpetas que se atraviesan desde la raíz separadas por el símbolo “/” y que termina con su propio nombre. Por ejemplo, /dirA/dirB/dirC/fichero.txt es la ruta absoluta del fichero fichero.txt almacenado en la carpeta dirC que a su vez está contenida en la carpeta dirB, a su vez contenida en la carpeta dirA almacenada en la raíz del sistema de ficheros.
+
+ /dirA/dirB/dirC/fichero.txt
+
+“..”: Es la carpeta del nivel superior en la jerarquía de ficheros que contiene a esta. Esta subcarpeta también esta presente en la raíz del sistema de ficheros (la carpeta con ruta absoluta “/”), pero apunta a si misma.
+
+“.”: Es la propia carpeta que aparece como si fuese también una subcarpeta. Se puede considerar como una “autoreferencia” o apuntador a si misma.
+
+Estas carpetas son a todos los efectos carpetas normales en el sistema; es decir, se pueden utilizar en las rutas. Por ejemplo, la ruta /dirA/dirB/dirC/../fichero2.txt se refiere al fichero que está almacenado en la carpeta dirB, pues desde dirC, la carpeta .. apunta a su predecesor, dirB. 
+
+
+Como consecuencia de la existencia de las carpetas “.” y “..”, un fichero puede tener múltiples rutas absolutas equivalentes. Por ejemplo, las siguientes rutas se refieren todas al mismo fichero.txt:
+ /dirA/dirB/dirC/../dirC/fichero.txt, /dirA/dirB/dirC/./././fichero.txt, /dirA/dirB/dirC/../../../dirA/dirB/dirC/./fichero.txt, etc.
+
+
+
+La rutas absolutas identifican de manera única cualquier fichero o carpeta en el sistema, pero pueden llegar a ser muy largas y por tanto costosas para escribir en un comando en el intérprete. La alternativa es utilizar rutas relativas.
+
+Una “ruta relativa” es una secuencia de nombres de carpetas separadas por “/” que no comienza por el símbolo “/” (si lo hiciera sería una ruta absoluta) y que se interpretan considerando como prefijo el directorio actual. Asumiendo que el directorio actual del intérprete es dirC la siguiente figura muestra la interpretación de diferentes rutas relativas. Nótese que ninguna de ellas comienza por el “/”:
+
+./fichero.txt, ../dirC/fichero.txt, ./../../../dirA/dirB/dirC/fichero.txt
+
+
 ## 4. Gestión de sistemas de archivos mediante comandos.
 
 Los archivos en Linux pueden ser gestionados de forma gráfica, pero nos centraremos en la forma mas tradicional mediante el uso de comandos en la terminal. 
