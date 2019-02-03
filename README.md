@@ -1,113 +1,115 @@
+# Administración de la información y  de software de base en sistemas Linux.
+
 ## 4. Gestión de sistemas de archivos mediante comandos.
 
 Los archivos en Linux pueden ser gestionados de forma gráfica, pero nos centraremos en la forma mas tradicional mediante el uso de comandos en la terminal. 
 
 Entre todos los comandos que existen cabe destacar los siguientes:
 
-* - pwd (print working directory)
+* pwd (print working directory)
 
 Nos indica cuál es el directorio en el que estamos trabajando.
 
-* - ls (list)
+* ls (list)
 
 Listado de los archivos y directorios contenidos en el directorio actual.
 
-   * - ls /etc
+   * ls /etc
                 Pasándole la ruta de un directorio, se listará el contenido del mismo.
   
-   * - ls -a
+   * ls -a
 
 Muestra todos los archivos del directorio actual (incluido los ocultos).
 
-   * - ls -l
+   * ls -l
 
 Se muestran los archivos del directorio actual en formato largo (con permisos propietario, tamaño, fecha de modificación, etc).
 
-   * - ls -lh
+   * ls -lh
 
 Añadiendo el parámetro ‘h’ se muestra el tamaño de archivos y directorios.
 
-   * - ls -R
+   * ls -R
 
 Se muestra el contenido de todos los subdirectorios.
 
-   * - ls -i ‘fichero’
+   * ls -i ‘fichero’
 
 Muestra el número de inodo del fichero dentro del sistema de archivos.
 
 Cabe destacar que los diferentes parámetros se pueden combinar de múltiples maneras y en cualquier orden. Por ejemplo:    ‘ls -laR’   o   ‘ls -l -a -R’, siendo igual de válidas las 2 formas.
 
-* - cd (change directory)
+* cd (change directory)
 
 Esta orden permite cambiar de un directorio a otro dentro de la estructura de directorios que poseamos.
 
 En caso de querer situarnos directamente en el directorio HOME del usuario usaremos:    ‘cd’   o   ‘cs~’.
 
-* - mkdir (make subdirectory)
+* mkdir (make subdirectory)
 
 Esta orden crea un nuevo directorio.
 
-* - rmdir (remove directory)
+* rmdir (remove directory)
 
 Permite eliminar un directorio vacío.
 
 Usando el comando ‘rm-rf’ se puede eliminar un directorio y sus subdirectorios (aunque estos tengan contenido). El parámetro ‘-r’ elimina los subdirectorios (elimina de manera recursiva) y con ‘f’ realizamos todas las confirmaciones de eliminación.
 
-* - tree
+* tree
 
 Muestra de forma gráfica la estructura de un directorio (requiere instalación previa).
 
-* - cat ‘léeme’ (concatenate)
+* cat ‘léeme’ (concatenate)
 
 Muestra el contenido del fichero indicado como parámetro (’mifichero’).
 
-* - touch ‘mifichero’
+* touch ‘mifichero’
 
 Crea un fichero vacío con el nombre que le pasamos como parámetro (’mifichero’).
 
-* - cp (copy)
+* cp (copy)
 
 Este comando dispone de 2 funcionalidades:
 
-   * - Copiar uno o varios ficheros de un directorio a otro 
+   * Copiar uno o varios ficheros de un directorio a otro 
 
 (ejemplo: ‘cp ./doc1 /home/usuario/’).
 
-   * - Copiar el fichero origen con un nuevo nombre si le indicamos ese nombre en el destino (ejemplo: ‘cp doc1 doc2’).
+   * Copiar el fichero origen con un nuevo nombre si le indicamos ese nombre en el destino (ejemplo: ‘cp doc1 doc2’).
 
 Con el parámetro ‘-v’ se muestra por pantalla los archivos que se están copiando en tiempo real.
 
-* - rm (remove)
+* rm (remove)
 
 Permite eliminar un fichero o un directorio.
 
 Utilizando el parámetro ‘-r’  se eliminan también los subdirectorios (elimina de manera recursiva) y con el parámetro ‘f’ realizamos todas las confirmaciones de eliminación (de modo que sería: ‘rm -rf’).
 
-* - mv (move)
+* mv (move)
 
 Permite mover un fichero de un directorio a otro (ejemplo: ‘mv dir1/doc1 /home’).
 
 También renombra el archivo si lo dejamos en el mismo directorio o si al indicarle el destino utilizamos un nombre distinto (ejemplo: ‘mv doc1 doc2’).
 
-* - dirname
+* dirname
 
 Muestra la ruta de directorios de una indicada por parámetro, eliminando el nombre del archivo (ejemplo: ‘dirname /home/usuario/.bashrc’). 
 
-* - basename
+* basename
 
 Muestra el nombre del archivo de una ruta indicada como parámetro (ejemplo: ‘basename /home/usuario/.bashrc’). 
 
-* - find
+* find
 
 Este comando permite buscar un fichero dentro del árbol de directorios del sistema (aunque presenta un uso más amplio).
 
 Con el parámetro ‘-name’ indicamos el nombre del fichero a buscar y con ‘-size’ los buscamos por el tamaño que le indicamos (ejemplos: ‘find /etc -size 50b’, ‘find /etc -name modprobe.conf’).
 
-* - which
+* which
 
 Permite localizar la ruta del fichero ejecutable o comando que se le pasa como parámetro (se ejecutaría en el entorno actual).
 
-* - whereis
+* whereis
 
 Este comando localiza todas las rutas donde se pueda encontrar el fichero ejecutable o comando que se le pasa como parámetro. 
 
@@ -327,23 +329,23 @@ Entre octal y binario la equivalencia y la lectura será de la siguiente manera:
 ### Gestión de permisos 
 Aunque la gestión de permisos en Linux se puede realizar de forma gráfica nos vamos a centrar en la gestión mediante el uso de comandos en la terminal, entre estos cabe destacar los siguientes comandos:
 
-* - chmod (change mode)
+* chmod (change mode)
 Este comando nos permitirá realizar cambios de permisos de protección sobre un fichero o directorio. Para usarlo debemos indicar las iniciales del usuario o grupo al que va dirigidos (siendo ‘u’ para el usuario propietario, ‘g’ para el grupo primario del usuario, ‘o’ para el resto de usuarios y ‘a’ para todos los usuarios), con ‘+’ o ‘-’ indicaremos si deseamos añadir o quitar los permisos que le indicamos y con ‘=’ asignaremos solo los permisos indicados (eliminando el resto de permisos del usuario o grupo, si los tuviera).
 
 Ejemplos (también se podrían realizar con el formato binario y octal como indicamos en el apartado anterior): ‘chmod u+rw atracos’, ‘chmod ug+r’, ‘chmod ug=r’.
 
-* - chown (change owner)
+* chown (change owner)
 Con este comando podemos cambiar el usuario propietario de un fichero. Para usarlo tendremos que indicar el usuario que va a ser propietario y el objeto al que se le ve a establecer la propiedad.
 
 Ejemplo: ‘chown pepe /home/atraco’.
 
-* - chgrp (change group)
+* chgrp (change group)
                 Este comando nos permite modificar el grupo propietario de un fichero.
 Para usarlo tendremos que indicar dos parámetros, el grupo que va a ser propietario y el objeto al que se le va a establecer la propiedad.
 
 Ejemplo: ‘chgrp delincuentes pruebas’ (al fichero ‘pruebas’ le hemos asignado como nuevo grupo propietario al grupo ‘delincuentes’).
 
-* - umask (user mask)
+* umask (user mask)
 Cuando se crea un nuevo fichero a este se le es asignado una serie de permisos de manera automática (debido a la máscara de permisos, la cual se los asigna con el valor octal a la hora de aplicarlos).
 Este comando nos permitirá conocer el valor por defecto de dicha máscara y en caso de querer modificarlo solo tendremos que insertar un valor en octal después de la instrucción (ejemplo: ‘umask 057’).
 
