@@ -568,3 +568,54 @@ Para añadir o eliminar usuarios del grupo, se utilizaran los comandos:
 
 		sudo adduser juan profesores
 		sudo deluser juan profesores
+
+## 13. Compresión/Descompresión y empaquetado/desempaquetado de datos.
+La compresion y descompresion de datos, reduce el tamaño de los archivos. Se utiliza el fichero gz.
+Para comprimir ficheros, se utiliza el siguiente comando: gzip -9 fichero
+-9: le indica a gz que utilice el mayor factor de compresión posible.
+Para descomprimir ficheros, se utilizara el siguiente comando: gzip -d fichero.gz
+-d: indica descompresión
+
+El empaquetado y desempaquetado de datos, reúne archivos o directorios dentro de un solo paquete. Utilizando ficheros tar.
+Para empaquetar ficheros se utiliza el comando: tar -cvf  archivo.tar /dir/a/comprimir/
+-c: indica a tar que cree un archivo.
+-v: indica a tar que muestre lo que va empaquetando.
+-f: indica a tar que el siguiente argumento es el nombre del fichero.tar.
+Para desempaquetar ficheros se utiliza el comando: tar -xvf   archivo.tar
+-x: indica a tar que descomprima el fichero.tar.
+-v: indica a tar que muestre lo que va desempaquetando.
+-f: indica a tar que el siguiente argumento es el nombre del fichero a desempaquetar.
+Para ver el fichero se utiliza el comando: tar -tf   archivo.tar
+-t: Lista el contenido del fichero .tar
+-f: indica a tar que el siguiente argumento es el nombre del fichero a ver
+
+## 14. Programar tareas con Cron.
+El comando crontab se utiliza para programar la ejecución de otros comandos. 
+· Para ver los crontabs se utilizara este código: sudo crontab -l
+· Para editar los crontabs se utilizara este código: sudo crontab -e
+
+Tiene un formato de tareas: * * * * * /bin/ejecutar/script.sh
+El 1º * significa los minutos de 0 a 59.
+El 1º * significa las horas de 0 a 23.
+El 1º * significa los días del mes de 1 a 30/31.
+El 1º * significa los mes: de 1 a 12.
+El 1º * significa los días de la semana: de 1 a 6.(Domingo 0)
+
+
+## 15. Procesos, tipos, estados & estructura.
+Podríamos definir a los procesos como programas que están corriendo en nuestro Sistema Operativo. Se pueden clasificar en tres grandes categorías:
+Procesos Normales: son lanzados en una terminal (tty) Y corren a nombre de un usuario.
+Procesos Daemon: corren a nombre de un usuario y no tienen salida directa por una terminal, es decir corren en 2º plano.
+Procesos Zombie: completa su ejecución pero aún tiene una entrada en la tabla de procesos.
+
+
+Los principales estados en los que pueden encontrarse los procesos en Linux/Unix son los siguientes:
+
+running (R) : Procesos que están en ejecución.
+sleeping (S) : Procesos que están esperando su turno para ejecutarse.
+stopped (D) : Procesos que esperan a que se finalice alguna operación de Entrada/Salida.
+zombie (Z) : Procesos que han terminado pero que siguen apareciendo en la tabla de procesos.
+
+ESTRUCTURA:
+
+
