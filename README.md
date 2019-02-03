@@ -1,4 +1,3 @@
-# sistemas
 ## 4. Gestión de sistemas de archivos mediante comandos.
 
 
@@ -177,9 +176,155 @@ Ejemplos: ‘ln -s doc1 doc2’,
 
 
 
+## 6. Estructura de directorios del sistema operativo
+
+				https://geekland.eu/estructura-de-directorios-en-linux/
+
+Existen varios tipos de directorios en Linux
+
+### Directorios compatibles
+
+	Son aquellos que se pueden acceder desde distintos equipos
+	Ej.: /var/mail, /opt, /home, /var/www/html, /usr
+
+### Directorios no compatibles
+
+	Son aquellos ditectorios que no se pueden compartir y su acceso y modificación están limitados al administrador del sistema
+	Ej.: /etc, /boot, /var/run
+
+### Directorios variables
+
+	Son aquellos directorios que pueden ser modificados y pueden variar su contenido sin la intervención del administrador del sistema
+	Ej.: /var/log/messages, /var/mail, /var/spool/news, /home, /var/run
+
+### Directorios estáticos
+
+	Son aquellos directorios que contienen archivos que solo pueden ser modificados con la intervención del sistema
+	Ej.: /etc/password, /etc/shadow, /usr, /opt, /etc, /boot, /bin, /sbin
+
+Los directorios mas destacables son:
+
+### Directorio raíz (/)
+
+	Es el directorio principal, desde aquí se ramifican todos los directorios
+
+### Directorio /bin
+
+	Se almacenan los datos ejecutables necesarios para el funcionamiento del sistema
+
+### Directorio /boot
+
+	En el se encuentran todos los archivos necesarios para que el ordenador arranque, salvo los archivos de configuración
+
+### Directorio /dev
+
+	Aquí se almacenan los datos acerca de nuestro hardware
+
+### Directorio /etc
+
+	Contiene los archivos de configuración del sistema operativo
+
+### Directorio /home
+
+	Aquí se encuentran alojados todos los archivos personales de cada usuario
+
+### Directorio /lib
+
+	Contiene bibliotecas compartidas para ejecutar binarios de los directorios /bin y /sbin
+
+### Directorio /mnt
+
+	Aquí se encuentran los puntos de montaje de distintos dispositivos de almacenamiento (generalmente discos duros y particiones)
+
+### Directorio /media
+
+	Aquí se encuentran los puntos de montaje de distintos dispositivos de almacenamiento (generalmente memorias USB, lectores CD-ROM o similares)	
+
+### Directorio /opt
+
+	Aquí se almacenan los programas que no vienen por defecto con el sistema operativo
+
+### Directorio /proc
+
+	Se almacena información de procesos y aplicaciones en ejecución
+
+### Directorio /root
+
+	Es el directorio /home del administrador del sistema
+
+### Directorio /sbin
+
+	Es la variante root del directorio /bin
+
+### Directorio /srv
+
+	Se almacenan datos que usan x servidores que se encuentren instalados en el equipo
+
+### Directorio /tmp
+
+	Se almacenan archivos temporales de programas que posteriormente son eliminados por el sistema operativo
+
+### Directorio /usr
+
+	Contiene la gran mayoría de programas instalados en el sistema
+
+### Directorio /var
+
+	Contiene datos variables y temporales de los registros del sistema (Logs)
+
+### Directorio /sys
+
+	Contiene información similar al directorio /proc, aquí encontramos información sobre el kernel del sistema
+
+### Directorio /lost+found
+
+	Aquí se encuentran archivos y ficheros necesarios para recuperar datos en caso de una posible caída del sistema operativo
+
+## 7. Búsqueda de información del sistema mediante comandos.
+
+				https://computernewage.com/2013/04/21/como-obtener-informacion-del-sistema-desde-la-terminal-de-linux/
+
+### Información del sistema (software)
+
+Para mostrar Información del sistema podemos usar el siguiente comando:
+	
+	uname
+	
+Para listar los usuarios que han iniciado sesión en el sistema en tiempo real usamos el siguiente comando:
+
+	who
+
+Para mostrar información relacionada con la configuración de red usamos el siguiente comando:
+	
+	ifconfig
+	
+### Información del sistema (hardware)
+
+Para mostrar un listado con los componentes físicos usamos el siguiente comando:
+
+	sudo lshw	
 
 
+## 8.Identificación del software instalado
 
+Si queremos saber los programas que tenemos instalados en nuestro Ubuntu tan solo tenemos que abrir una Terminal y escribir el siguiente comando:
+
+		dpkg –get-selections
+
+Dependiendo la version, te aparecera una lista con todos los programas o solo los ultimos instalados.
+
+Ademas del uso del comando anterior, se pueden ver entrando en el icono de software de Ubuntu y podemos añadir filtros. En esa misma pantalla hay un boton ‘Instaladas’ que, si pulsamos, nos mostrara las aplicaciones instaladas en el pc.
+
+
+## 9.Montaje y desmontaje del dispositivo del sistema operativo
+
+Para montar y desmontar un dispositivo de Linux, se puede hacer de 2 formas distintas, grafica y manualmente.
+
+Para montar y demontar un disco graficamente, solo necesitamos entrar en ‘Discos’ y seleccionamos el disco que queramos montar/desmontar. Si queremos intalarlo, le daremos al triangulo que aparece en el lado derecho y, si lo que queremos es desmontarlo, le daremos al cuadrado.
+
+Para montar/desmontar manualmente, abriremos el terminal y seguiremos la guia del siguiente video:
+
+		https://www.youtube.com/watch?v=TO7SrGv2RWk
 
 
 
@@ -274,3 +419,54 @@ Ejemplo: ‘chgrp delincuentes pruebas’ (al fichero ‘pruebas’ le hemos asi
 * - umask (user mask)
 Cuando se crea un nuevo fichero a este se le es asignado una serie de permisos de manera automática (debido a la máscara de permisos, la cual se los asigna con el valor octal a la hora de aplicarlos).
 Este comando nos permitirá conocer el valor por defecto de dicha máscara y en caso de querer modificarlo solo tendremos que insertar un valor en octal después de la instrucción (ejemplo: ‘umask 057’).
+
+## 11. Ficheros de logs y de configuración del sistema
+
+				http://www.estrellateyarde.org/logs-en-linux
+
+El sistema de logs se inicia con el siguiente script ubicado en:
+	
+	/etc/init.d/sysklogd
+
+Este script engloba logs del sistema (syslogd) y logs del kernel (klogd)
+
+Estos logs se guardan en archivos ubicados en el directorio:
+
+	/var/log
+
+Una gran parte de programas gestiona sus propios logs, estos se almacenan en:
+
+	/var/log/<programa>
+
+Los logs se van comprimiendo para evitar que se vuelvan excesivamente largos
+
+Para monitorizar los logs por consola, usamos el siguiente comando
+
+	tail
+
+Estos también se pueden visualizar mediante un entorno gráfico, para ello existen diferentes programas que, según la distribución de linux que uses, puede que venga preinstalada en tu equipo.
+
+	Algunos ejemplos son KSystemLog (Es el monitor de logs del entorno de escritorio KDE), GNOME-System-Log (monitor de logs del entorno de escritorio GNOME), XLogmaster (monitor de logs de GNU) y Xwatch (monitor de logs para las librerías X)
+
+
+## 12.Administracion de usuarios y grupos
+
+Para crear usuarios en Linux necesitaremos el comando useradd, escribiendo en el terminal:
+		sudo useradd juan
+Si queremos que haya un comentario podemos añadir:
+		sudo useradd -d /usr/juan -s /bin/csh -u 800 -c "Juan Perez Hernandez" juan
+Para modificar el usuario, deberemos usar usermod de la siguiente forma:
+		sudo usermod -l sego sergio
+Si lo que queremos es eliminar el usuario, escribiremos en el terminal:
+		sudo userdel sergio
+Para crear un grupo utilizaremos el comando groupadd de la siguiente forma:
+		sudo groupadd nombreDeGrupo
+Para modificar el grupo:
+		 sudo groupmod -g 2000 profesores
+
+Y para eliminar:
+		sudo  groupdel profesores
+
+Para añadir o eliminar usuarios del grupo, se utilizaran los comandos:
+		sudo adduser juan profesores
+		sudo deluser juan profesores
