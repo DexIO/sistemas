@@ -133,7 +133,8 @@ Estas carpetas son a todos los efectos carpetas normales en el sistema; es decir
 
 Como consecuencia de la existencia de las carpetas “.” y “..”, un fichero puede tener múltiples rutas absolutas equivalentes. Por ejemplo, las siguientes rutas se refieren todas al mismo fichero.txt:
 	
-	/dirA/dirB/dirC/../dirC/fichero.txt, /dirA/dirB/dirC/./././fichero.txt, /dirA/dirB/dirC/../../../dirA/dirB/dirC/./fichero.txt, etc.
+	/dirA/dirB/dirC/../dirC/fichero.txt, /dirA/dirB/dirC/./././fichero.txt,
+	/dirA/dirB/dirC/../../../dirA/dirB/dirC/./fichero.txt, etc.
 
 
 
