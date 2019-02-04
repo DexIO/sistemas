@@ -320,7 +320,7 @@ Son aquellos que se pueden acceder desde distintos equipos
 
 ### Directorios no compatibles
 
-Son aquellos ditectorios que no se pueden compartir y su acceso y modificación están limitados al administrador del sistema
+Son aquellos directorios que no se pueden compartir y su acceso y modificación están limitados al administrador del sistema
 
 	Ej.: /etc, /boot, /var/run
 
