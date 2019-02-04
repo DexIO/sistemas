@@ -454,6 +454,8 @@ Para montar y demontar un disco graficamente, solo necesitamos entrar en ‘Disc
 
 Para montar/desmontar manualmente, abriremos el terminal y seguiremos la guia del siguiente video:
 
+#### Haz click en la imagen ༼ つ ◕_◕ ༽つ
+
 [![No furula :(](https://img.youtube.com/vi/TO7SrGv2RWk/0.jpg)](https://www.youtube.com/watch?v=TO7SrGv2RWk)
 
 
@@ -486,7 +488,8 @@ Entre octal y binario la equivalencia y la lectura será de la siguiente manera:
 ### Gestión de permisos 
 Aunque la gestión de permisos en Linux se puede realizar de forma gráfica nos vamos a centrar en la gestión mediante el uso de comandos en la terminal, entre estos cabe destacar los siguientes comandos:
 
-* chmod (change mode)
+	chmod (change mode)
+
 Este comando nos permitirá realizar cambios de permisos de protección sobre un fichero o directorio. Para usarlo debemos indicar las iniciales del usuario o grupo al que va dirigidos (siendo ‘u’ para el usuario propietario, ‘g’ para el grupo primario del usuario, ‘o’ para el resto de usuarios y ‘a’ para todos los usuarios), con ‘+’ o ‘-’ indicaremos si deseamos añadir o quitar los permisos que le indicamos y con ‘=’ asignaremos solo los permisos indicados (eliminando el resto de permisos del usuario o grupo, si los tuviera).
 
 Ejemplos (también se podrían realizar con el formato binario y octal como indicamos en el apartado anterior): ‘chmod u+rw atracos’, ‘chmod ug+r’, ‘chmod ug=r’.
