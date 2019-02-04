@@ -218,9 +218,7 @@ Crea un fichero vacío con el nombre que le pasamos como parámetro (’mificher
 
 Este comando dispone de 2 funcionalidades:
 
-   * Copiar uno o varios ficheros de un directorio a otro 
-
-(ejemplo: ‘cp ./doc1 /home/usuario/’).
+   * Copiar uno o varios ficheros de un directorio a otro (ejemplo: ‘cp ./doc1 /home/usuario/’).
 
    * Copiar el fichero origen con un nuevo nombre si le indicamos ese nombre en el destino (ejemplo: ‘cp doc1 doc2’).
 
