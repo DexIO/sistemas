@@ -184,7 +184,9 @@ Se muestra el contenido de todos los subdirectorios.
 
 Muestra el número de inodo del fichero dentro del sistema de archivos.
 
-Cabe destacar que los diferentes parámetros se pueden combinar de múltiples maneras y en cualquier orden. Por ejemplo:    ‘ls -laR’   o   ‘ls -l -a -R’, siendo igual de válidas las 2 formas.
+Cabe destacar que los diferentes parámetros se pueden combinar de múltiples maneras y en cualquier orden. 
+
+Por ejemplo:    ‘ls -laR’   o   ‘ls -l -a -R’, siendo igual de válidas las 2 formas.
 
 	cd (change directory)
 
@@ -238,7 +240,9 @@ También renombra el archivo si lo dejamos en el mismo directorio o si al indica
 
 	dirname
 
-Muestra la ruta de directorios de una indicada por parámetro, eliminando el nombre del archivo (ejemplo: ‘dirname /home/usuario/.bashrc’). 
+Muestra la ruta de directorios de una indicada por parámetro, eliminando el nombre del archivo 
+
+(ejemplo: ‘dirname /home/usuario/.bashrc’). 
 
 	basename
 
