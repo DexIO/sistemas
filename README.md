@@ -238,7 +238,8 @@ También renombra el archivo si lo dejamos en el mismo directorio o si al indica
 
 	dirname
 
-Muestra la ruta de directorios de una indicada por parámetro, eliminando el nombre del archivo (ejemplo: ‘dirname /home/usuario/.bashrc’). 
+Muestra la ruta de directorios de una indicada por parámetro, eliminando el nombre del archivo 
+(ejemplo: ‘dirname /home/usuario/.bashrc’). 
 
 	basename
 
