@@ -268,7 +268,7 @@ El término hace referencia a aquellos archivos que apuntan al mismo contenido e
 En resumen, se trata de un archivo (archivo original, con un inodo único) que se identifica con varios nombres. De esta forma cualquier cambio que se realice utilizando cualquiera de los nombres quedará reflejado en el archivo.
 En la siguiente imagen se puede apreciar lo anteriormente explicado:
   
-  ![](/1.jpg)
+  ![](assets/img/1.jpg)
   
 #### ¿Cómo se crean? 
 
@@ -292,7 +292,7 @@ Se puede comprobar que dos archivos son enlaces físicos examinando su inodo med
 
 Los enlaces simbólicos son lo más similar a los accesos directos en Windows, ya que a diferencia de los enlaces duros estos apuntan al nombre de un archivo y este archivo apunta al contenido almacenado en la unidad de almacenamiento, como es apreciable en la siguiente imagen explicativa:  
   
-  ![](/2.jpg)
+  ![](assets/img/2.jpg)
   
 ###### Insertar imagen  
   
@@ -467,21 +467,21 @@ Para montar/desmontar manualmente, abriremos el terminal y seguiremos la guia de
 En Linux todos los ficheros y directorios pertenecen a un usuario y al grupo primario del mismo (es decir, cuando se crea un fichero o directorio este pertenece al usuario creador y a su grupo principal).
 Cuando visualizamos la información de permisos sobre un fichero (con comando de listado como ‘ls -l’, los cuales se explican en el apartado 4) se nos mostrará como se puede observar en el siguiente ejemplo:
   
-  ![](/3.jpg)
+  ![](assets/img/3.jpg)
   
 Como se analiza en la imagen la primera parte hace referencia al tipo de archivo, existiendo entre otros lo siguientes:
   
-  ![](/4.jpg)
+  ![](assets/img/4.jpg)
   
 Como se puede observar en la primera imagen los permisos de dividen en 3 (lectura, escritura y ejecución), siendo estos indicados en orden para el usuario propietario, el grupo y otros. Estos permisos se pueden otorgar en 3 formatos (en binario, en octal o de manera simbólica indicando con las letras de cada permiso: ‘r’, ‘w’, ‘x’ o ‘-’ en caso de no querer otorgar el permiso), como se puede observar en la siguientes tablas de equivalencias:    
 
-![](/5.jpg)
-![](/6.jpg)
+![](assets/img/5.jpg)
+![](assets/img/6.jpg)
 
 Entre octal y binario la equivalencia y la lectura será de la siguiente manera:  
 
-![](/7.jpg)
-![](/8.jpg)
+![](assets/img/7.jpg)
+![](assets/img/8.jpg)
 
 
 ### Gestión de permisos 
