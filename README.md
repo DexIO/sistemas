@@ -278,9 +278,7 @@ Este tipo de enlaces se crean con el siguiente comando:
 
 	ln ‘nombrefichero’ ‘nombreenlaceduro’ 
 
-Ejemplo: 
-
-	‘ln doc1 doc2’ 
+Ejemplo: ‘ln doc1 doc2’. 
 
 de esta forma estamos creando un enlace duro llamado ‘doc2’ del archivo llamado ‘doc1’ 
 
@@ -301,10 +299,9 @@ Los enlaces simbólicos son lo más similar a los accesos directos en Windows, y
 Este tipo de enlaces se crean con el mismo comando que el visto anteriormente pero añadiendo el parámetro ‘-s’. En este caso se pueden especificar directorios diferentes (atención al uso de rutas relativas en el destino).
 
 Ejemplos: 
-
-	‘ln -s doc1 doc2’, 
-	‘ln -s /home/usuario/examples /home/usuario/Escritorio/ejemplos’,
-	‘ln -s /home/usuario/examples ../ejemplos’.
+	 ‘ln -s doc1 doc2’, 
+	 ‘ln -s /home/usuario/examples /home/usuario/Escritorio/ejemplos’,
+	 ‘ln -s /home/usuario/examples ../ejemplos’.
 
 ## 6. Estructura de directorios del sistema operativo
 
