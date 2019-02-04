@@ -133,16 +133,17 @@ Estas carpetas son a todos los efectos carpetas normales en el sistema; es decir
 
 Como consecuencia de la existencia de las carpetas “.” y “..”, un fichero puede tener múltiples rutas absolutas equivalentes. Por ejemplo, las siguientes rutas se refieren todas al mismo fichero.txt:
 	
-	/dirA/dirB/dirC/../dirC/fichero.txt, /dirA/dirB/dirC/./././fichero.txt,
-	/dirA/dirB/dirC/../../../dirA/dirB/dirC/./fichero.txt, etc.
-
-
+	/dirA/dirB/dirC/../dirC/fichero.txt
+	/dirA/dirB/dirC/./././fichero.txt
+	/dirA/dirB/dirC/../../../dirA/dirB/dirC/./fichero.txt
 
 La rutas absolutas identifican de manera única cualquier fichero o carpeta en el sistema, pero pueden llegar a ser muy largas y por tanto costosas para escribir en un comando en el intérprete. La alternativa es utilizar rutas relativas.
 
 Una “ruta relativa” es una secuencia de nombres de carpetas separadas por “/” que no comienza por el símbolo “/” (si lo hiciera sería una ruta absoluta) y que se interpretan considerando como prefijo el directorio actual. Asumiendo que el directorio actual del intérprete es dirC la siguiente figura muestra la interpretación de diferentes rutas relativas. Nótese que ninguna de ellas comienza por el “/”:
 
-	./fichero.txt, ../dirC/fichero.txt, ./../../../dirA/dirB/dirC/fichero.txt
+	./fichero.txt
+	../dirC/fichero.txt
+	./../../../dirA/dirB/dirC/fichero.txt
 
 
 ## 4. Gestión de sistemas de archivos mediante comandos.
