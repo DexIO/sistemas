@@ -184,7 +184,7 @@ Se muestra el contenido de todos los subdirectorios.
 
 Muestra el número de inodo del fichero dentro del sistema de archivos.
 
-Cabe destacar que los diferentes parámetros se pueden combinar de múltiples maneras y en cualquier orden. 
+Cabe destacar que los diferentes parámetros se pueden combinar de múltiples maneras y en cualquier orden.
 
 Por ejemplo:    ‘ls -laR’   o   ‘ls -l -a -R’, siendo igual de válidas las 2 formas.
 
