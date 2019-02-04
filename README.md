@@ -302,9 +302,9 @@ Este tipo de enlaces se crean con el mismo comando que el visto anteriormente pe
 
 Ejemplos: 
 
-		‘ln -s doc1 doc2’, 
-		 ‘ln -s /home/usuario/examples /home/usuario/Escritorio/ejemplos’,
-     ‘ln -s /home/usuario/examples ../ejemplos’.
+	‘ln -s doc1 doc2’, 
+	‘ln -s /home/usuario/examples /home/usuario/Escritorio/ejemplos’,
+	‘ln -s /home/usuario/examples ../ejemplos’.
 
 ## 6. Estructura de directorios del sistema operativo
 
