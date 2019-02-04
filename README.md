@@ -492,18 +492,18 @@ Este comando nos permitirá realizar cambios de permisos de protección sobre un
 
 Ejemplos (también se podrían realizar con el formato binario y octal como indicamos en el apartado anterior): ‘chmod u+rw atracos’, ‘chmod ug+r’, ‘chmod ug=r’.
 
- * chown (change owner)
+  * chown (change owner)
 Con este comando podemos cambiar el usuario propietario de un fichero. Para usarlo tendremos que indicar el usuario que va a ser propietario y el objeto al que se le ve a establecer la propiedad.
 
 Ejemplo: ‘chown pepe /home/atraco’.
 
- * chgrp (change group)
+  * chgrp (change group)
                Este comando nos permite modificar el grupo propietario de un fichero.
 Para usarlo tendremos que indicar dos parámetros, el grupo que va a ser propietario y el objeto al que se le va a establecer la propiedad.
 
 Ejemplo: ‘chgrp delincuentes pruebas’ (al fichero ‘pruebas’ le hemos asignado como nuevo grupo propietario al grupo ‘delincuentes’).
 
-	* umask (user mask)
+  * umask (user mask)
 Cuando se crea un nuevo fichero a este se le es asignado una serie de permisos de manera automática (debido a la máscara de permisos, la cual se los asigna con el valor octal a la hora de aplicarlos).
 Este comando nos permitirá conocer el valor por defecto de dicha máscara y en caso de querer modificarlo solo tendremos que insertar un valor en octal después de la instrucción (ejemplo: ‘umask 057’).
 
