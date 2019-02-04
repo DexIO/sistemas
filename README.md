@@ -122,7 +122,7 @@ Linux organiza ficheros y carpetas en un estructura de árbol. Un fichero está 
 
 Todo fichero o carpeta tiene una ruta absoluta que es la secuencia de carpetas que se atraviesan desde la raíz separadas por el símbolo “/” y que termina con su propio nombre. Por ejemplo, /dirA/dirB/dirC/fichero.txt es la ruta absoluta del fichero fichero.txt almacenado en la carpeta dirC que a su vez está contenida en la carpeta dirB, a su vez contenida en la carpeta dirA almacenada en la raíz del sistema de ficheros.
 
- /dirA/dirB/dirC/fichero.txt
+	/dirA/dirB/dirC/fichero.txt
 
 “..”: Es la carpeta del nivel superior en la jerarquía de ficheros que contiene a esta. Esta subcarpeta también esta presente en la raíz del sistema de ficheros (la carpeta con ruta absoluta “/”), pero apunta a si misma.
 
@@ -132,7 +132,8 @@ Estas carpetas son a todos los efectos carpetas normales en el sistema; es decir
 
 
 Como consecuencia de la existencia de las carpetas “.” y “..”, un fichero puede tener múltiples rutas absolutas equivalentes. Por ejemplo, las siguientes rutas se refieren todas al mismo fichero.txt:
- /dirA/dirB/dirC/../dirC/fichero.txt, /dirA/dirB/dirC/./././fichero.txt, /dirA/dirB/dirC/../../../dirA/dirB/dirC/./fichero.txt, etc.
+	
+	/dirA/dirB/dirC/../dirC/fichero.txt, /dirA/dirB/dirC/./././fichero.txt, /dirA/dirB/dirC/../../../dirA/dirB/dirC/./fichero.txt, etc.
 
 
 
@@ -140,7 +141,7 @@ La rutas absolutas identifican de manera única cualquier fichero o carpeta en e
 
 Una “ruta relativa” es una secuencia de nombres de carpetas separadas por “/” que no comienza por el símbolo “/” (si lo hiciera sería una ruta absoluta) y que se interpretan considerando como prefijo el directorio actual. Asumiendo que el directorio actual del intérprete es dirC la siguiente figura muestra la interpretación de diferentes rutas relativas. Nótese que ninguna de ellas comienza por el “/”:
 
-./fichero.txt, ../dirC/fichero.txt, ./../../../dirA/dirB/dirC/fichero.txt
+	./fichero.txt, ../dirC/fichero.txt, ./../../../dirA/dirB/dirC/fichero.txt
 
 
 ## 4. Gestión de sistemas de archivos mediante comandos.
@@ -149,68 +150,69 @@ Los archivos en Linux pueden ser gestionados de forma gráfica, pero nos centrar
 
 Entre todos los comandos que existen cabe destacar los siguientes:
 
-* pwd (print working directory)
+	pwd (print working directory)
 
 Nos indica cuál es el directorio en el que estamos trabajando.
 
-* ls (list)
+	ls (list)
 
 Listado de los archivos y directorios contenidos en el directorio actual.
 
-   * ls /etc
-                Pasándole la ruta de un directorio, se listará el contenido del mismo.
-  
-   * ls -a
+	ls /etc
+
+Pasándole la ruta de un directorio, se listará el contenido del mismo.
+
+	ls -a
 
 Muestra todos los archivos del directorio actual (incluido los ocultos).
 
-   * ls -l
+	ls -l
 
 Se muestran los archivos del directorio actual en formato largo (con permisos propietario, tamaño, fecha de modificación, etc).
 
-   * ls -lh
+	ls -lh
 
 Añadiendo el parámetro ‘h’ se muestra el tamaño de archivos y directorios.
 
-   * ls -R
+	ls -R
 
 Se muestra el contenido de todos los subdirectorios.
 
-   * ls -i ‘fichero’
+	ls -i ‘fichero’
 
 Muestra el número de inodo del fichero dentro del sistema de archivos.
 
 Cabe destacar que los diferentes parámetros se pueden combinar de múltiples maneras y en cualquier orden. Por ejemplo:    ‘ls -laR’   o   ‘ls -l -a -R’, siendo igual de válidas las 2 formas.
 
-* cd (change directory)
+	cd (change directory)
 
 Esta orden permite cambiar de un directorio a otro dentro de la estructura de directorios que poseamos.
 
 En caso de querer situarnos directamente en el directorio HOME del usuario usaremos:    ‘cd’   o   ‘cs~’.
 
-* mkdir (make subdirectory)
+	mkdir (make subdirectory)
 
 Esta orden crea un nuevo directorio.
 
-* rmdir (remove directory)
+	rmdir (remove directory)
 
 Permite eliminar un directorio vacío.
 
 Usando el comando ‘rm-rf’ se puede eliminar un directorio y sus subdirectorios (aunque estos tengan contenido). El parámetro ‘-r’ elimina los subdirectorios (elimina de manera recursiva) y con ‘f’ realizamos todas las confirmaciones de eliminación.
 
-* tree
+	tree
 
 Muestra de forma gráfica la estructura de un directorio (requiere instalación previa).
 
-* cat ‘léeme’ (concatenate)
+	cat ‘léeme’ (concatenate)
 
 Muestra el contenido del fichero indicado como parámetro (’mifichero’).
 
-* touch ‘mifichero’
+	touch ‘mifichero’
 
 Crea un fichero vacío con el nombre que le pasamos como parámetro (’mifichero’).
 
-* cp (copy)
+	cp (copy)
 
 Este comando dispone de 2 funcionalidades:
 
@@ -222,37 +224,37 @@ Este comando dispone de 2 funcionalidades:
 
 Con el parámetro ‘-v’ se muestra por pantalla los archivos que se están copiando en tiempo real.
 
-* rm (remove)
+	rm (remove)
 
 Permite eliminar un fichero o un directorio.
 
 Utilizando el parámetro ‘-r’  se eliminan también los subdirectorios (elimina de manera recursiva) y con el parámetro ‘f’ realizamos todas las confirmaciones de eliminación (de modo que sería: ‘rm -rf’).
 
-* mv (move)
+	mv (move)
 
 Permite mover un fichero de un directorio a otro (ejemplo: ‘mv dir1/doc1 /home’).
 
 También renombra el archivo si lo dejamos en el mismo directorio o si al indicarle el destino utilizamos un nombre distinto (ejemplo: ‘mv doc1 doc2’).
 
-* dirname
+	dirname
 
 Muestra la ruta de directorios de una indicada por parámetro, eliminando el nombre del archivo (ejemplo: ‘dirname /home/usuario/.bashrc’). 
 
-* basename
+	basename
 
 Muestra el nombre del archivo de una ruta indicada como parámetro (ejemplo: ‘basename /home/usuario/.bashrc’). 
 
-* find
+	find
 
 Este comando permite buscar un fichero dentro del árbol de directorios del sistema (aunque presenta un uso más amplio).
 
 Con el parámetro ‘-name’ indicamos el nombre del fichero a buscar y con ‘-size’ los buscamos por el tamaño que le indicamos (ejemplos: ‘find /etc -size 50b’, ‘find /etc -name modprobe.conf’).
 
-* which
+	which
 
 Permite localizar la ruta del fichero ejecutable o comando que se le pasa como parámetro (se ejecutaría en el entorno actual).
 
-* whereis
+	whereis
 
 Este comando localiza todas las rutas donde se pueda encontrar el fichero ejecutable o comando que se le pasa como parámetro. 
 
