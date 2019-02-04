@@ -454,8 +454,7 @@ Para montar y demontar un disco graficamente, solo necesitamos entrar en ‘Disc
 
 Para montar/desmontar manualmente, abriremos el terminal y seguiremos la guia del siguiente video:
 
-		https://www.youtube.com/watch?v=TO7SrGv2RWk
-
+[![No furula :(](https://img.youtube.com/vi/TO7SrGv2RWk/0.jpg)](https://www.youtube.com/watch?v=TO7SrGv2RWk)
 
 
 
@@ -492,18 +491,21 @@ Este comando nos permitirá realizar cambios de permisos de protección sobre un
 
 Ejemplos (también se podrían realizar con el formato binario y octal como indicamos en el apartado anterior): ‘chmod u+rw atracos’, ‘chmod ug+r’, ‘chmod ug=r’.
 
-  * chown (change owner)
+	chown (change owner)
+
 Con este comando podemos cambiar el usuario propietario de un fichero. Para usarlo tendremos que indicar el usuario que va a ser propietario y el objeto al que se le ve a establecer la propiedad.
 
 Ejemplo: ‘chown pepe /home/atraco’.
 
-  * chgrp (change group)
-               Este comando nos permite modificar el grupo propietario de un fichero.
+	chgrp (change group)
+
+Este comando nos permite modificar el grupo propietario de un fichero.
 Para usarlo tendremos que indicar dos parámetros, el grupo que va a ser propietario y el objeto al que se le va a establecer la propiedad.
 
 Ejemplo: ‘chgrp delincuentes pruebas’ (al fichero ‘pruebas’ le hemos asignado como nuevo grupo propietario al grupo ‘delincuentes’).
 
-  * umask (user mask)
+	umask (user mask)
+
 Cuando se crea un nuevo fichero a este se le es asignado una serie de permisos de manera automática (debido a la máscara de permisos, la cual se los asigna con el valor octal a la hora de aplicarlos).
 Este comando nos permitirá conocer el valor por defecto de dicha máscara y en caso de querer modificarlo solo tendremos que insertar un valor en octal después de la instrucción (ejemplo: ‘umask 057’).
 
@@ -538,36 +540,36 @@ Algunos ejemplos son KSystemLog (Es el monitor de logs del entorno de escritorio
 
 Para crear usuarios en Linux necesitaremos el comando useradd, escribiendo en el terminal:
 
-		sudo useradd juan
+	sudo useradd juan
 
 Si queremos que haya un comentario podemos añadir:
 
-		sudo useradd -d /usr/juan -s /bin/csh -u 800 -c "Juan Perez Hernandez" juan
+	sudo useradd -d /usr/juan -s /bin/csh -u 800 -c "Juan Perez Hernandez" juan
 
 Para modificar el usuario, deberemos usar usermod de la siguiente forma:
 
-		sudo usermod -l sego sergio
+	sudo usermod -l sego sergio
 
 Si lo que queremos es eliminar el usuario, escribiremos en el terminal:
 
-		sudo userdel sergio
+	sudo userdel sergio
 
 Para crear un grupo utilizaremos el comando groupadd de la siguiente forma:
 
-		sudo groupadd nombreDeGrupo
+	sudo groupadd nombreDeGrupo
 
 Para modificar el grupo:
 
-		 sudo groupmod -g 2000 profesores
+	sudo groupmod -g 2000 profesores
 
 Y para eliminar:
 
-		sudo  groupdel profesores
+	sudo  groupdel profesores
 
 Para añadir o eliminar usuarios del grupo, se utilizaran los comandos:
 
-		sudo adduser juan profesores
-		sudo deluser juan profesores
+	sudo adduser juan profesores
+	sudo deluser juan profesores
 
 ## 13. Compresión/Descompresión y empaquetado/desempaquetado de datos.
 La compresion y descompresion de datos, reduce el tamaño de los archivos. Se utiliza el fichero gz.
