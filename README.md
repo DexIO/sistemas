@@ -618,4 +618,4 @@ zombie (Z) : Procesos que han terminado pero que siguen apareciendo en la tabla 
 
 ESTRUCTURA:
 
-
+![](assets/img/9.jpg)
