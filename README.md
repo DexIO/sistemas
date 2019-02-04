@@ -492,13 +492,13 @@ Este comando nos permitirá realizar cambios de permisos de protección sobre un
 
 Ejemplos (también se podrían realizar con el formato binario y octal como indicamos en el apartado anterior): ‘chmod u+rw atracos’, ‘chmod ug+r’, ‘chmod ug=r’.
 
-	* chown (change owner)
+ * chown (change owner)
 Con este comando podemos cambiar el usuario propietario de un fichero. Para usarlo tendremos que indicar el usuario que va a ser propietario y el objeto al que se le ve a establecer la propiedad.
 
 Ejemplo: ‘chown pepe /home/atraco’.
 
-	* chgrp (change group)
-                Este comando nos permite modificar el grupo propietario de un fichero.
+ * chgrp (change group)
+               Este comando nos permite modificar el grupo propietario de un fichero.
 Para usarlo tendremos que indicar dos parámetros, el grupo que va a ser propietario y el objeto al que se le va a establecer la propiedad.
 
 Ejemplo: ‘chgrp delincuentes pruebas’ (al fichero ‘pruebas’ le hemos asignado como nuevo grupo propietario al grupo ‘delincuentes’).
