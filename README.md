@@ -1,10 +1,10 @@
 # Administración de la información y  de software de base en sistemas Linux.
 
-## 1. Los sistemas operativos Linux. Características. Historia.
+# 1. Los sistemas operativos Linux. Características. Historia.
 
-### Historia de Linux
+## Historia de Linux
 
-#### Richard Stallman. GNU
+### Richard Stallman. GNU
 
 En 1983 Richard Stallman tras trabajar con unix, el cual es un sistema operativo propietario de los Laboratorios Bell de AT&T, Stallman empieza a tener problemas con este sistema operativo, ya que no podía modificarlo, mejorarlo o adaptarlo a sus necesidades.
 
@@ -12,7 +12,7 @@ Por este motivo inició el proyecto GNU, acrónimo de GNU is NOT UNIX, con la id
 
 Esto motivó a muchos desarrolladores a crear programas y aplicaciones independientes de software libre y en pocos años se había desarrollado prácticamente un S.O. completamente libre. Sin embargo, aún faltaba el kernel.
 
-#### Linus Torvalds. Inicios de Linux
+### Linus Torvalds. Inicios de Linux
 
 Esta última parte la realizó Linus Torvalds, estudiante de informática en la universidad de Helsinki.
 
@@ -23,13 +23,13 @@ Linus, que formaba parte de la comunidad de Minix, decidió crear un nuevo kerne
 La primera versión de Linux 0.02  se hizo pública en 1991, el cual ya contaba con un compilador de C, pero poco más funcionaba. En posteriores versiones se unieron más programadores al proyecto a través de internet y después de de un tiempo se llegó a la versión 1.0 en 1994.
 
 
-### Sistemas operativos Linux
+## Sistemas operativos Linux
 
 Se conoce como  sistemas operativos Linux, aquellos que se han desarrollado a partir del kernel o núcleo de Linux y con la filosofía GNU.
 
 Existen múltiples distribuciones de Linux. Algunas de las más conocidas pueden ser Ubuntu, Debian o Fedoraç, por poner algunos ejemplos.
 
-### Características
+## Características
 
 
 * Multitarea: La palabra multitarea describe la habilidad de ejecutar varios programas al mismo tiempo. LINUX utiliza la llamada multitarea preventiva, la cual asegura que todos los programas que se están utilizando en un momento dado serán ejecutados, siendo el sistema operativo el encargado de ceder tiempo de microprocesador a cada programa.
@@ -87,7 +87,7 @@ Existen múltiples distribuciones de Linux. Algunas de las más conocidas pueden
 
 
 
-## 2. Sistemas de archivos de Linux.
+# 2. Sistemas de archivos de Linux.
 
 Los sistemas de archivos son métodos que utiliza un sistema operativo para localizar los archivos de un disco o partición. Es decir, es la manera en la que se organizan los archivos del disco.
 
@@ -106,9 +106,9 @@ Los sistemas de archivos más utilizados en linux son ext2, ext3, ext4 ReiserFS,
 
 
 
-## 3. Rutas y nombres de archivos. Estructura jerárquica.
+# 3. Rutas y nombres de archivos. Estructura jerárquica.
 
-### Estructura jerárquica.
+## Estructura jerárquica.
 
 El estándar de jerarquía del sistema de archivos (o FHS, del inglés Filesystem Hierarchy Standard) es una norma que define los directorios principales y sus contenidos en el sistema operativo GNU/Linux y otros sistemas de la familia Unix. Se diseñó originalmente en 1994 para estandarizar el sistema de archivos de las distribuciones de Linux, basándose en la tradicional organización de directorios de los sistemas Unix. En 1995 se amplió el ámbito del estándar a cualquier Unix que se adhiriese voluntariamente.
 
@@ -116,7 +116,7 @@ FHS no es más que un documento guía, es decir, cualquier fabricante de softwar
 
 Es importante saber que el estándar FHS es en cierto modo flexible, es decir, existe cierta libertad en el momento de aplicar las normas. De ahí que existan en la actualidad leves diferencias entre distribuciones GNU/Linux.
 
-### Rutas y nombres de archivos.
+## Rutas y nombres de archivos.
 
 Linux organiza ficheros y carpetas en un estructura de árbol. Un fichero está siempre en una carpeta, y una carpeta puede contener ficheros y subcarpetas. La carpeta de más alto nivel en esta jerarquía en Linux siempre tiene el nombre “/”.
 
@@ -146,7 +146,7 @@ Una “ruta relativa” es una secuencia de nombres de carpetas separadas por �
 	./../../../dirA/dirB/dirC/fichero.txt
 
 
-## 4. Gestión de sistemas de archivos mediante comandos.
+# 4. Gestión de sistemas de archivos mediante comandos.
 
 Los archivos en Linux pueden ser gestionados de forma gráfica, pero nos centraremos en la forma mas tradicional mediante el uso de comandos en la terminal. 
 
@@ -262,13 +262,13 @@ Permite localizar la ruta del fichero ejecutable o comando que se le pasa como p
 
 Este comando localiza todas las rutas donde se pueda encontrar el fichero ejecutable o comando que se le pasa como parámetro. 
 
-## 5. Gestión de enlaces o accesos directos.
+# 5. Gestión de enlaces o accesos directos.
 
 En Linux se pueden crear dos tipos de enlaces o accesos directos, los enlaces duros (también conocidos como enlaces físicos o enlaces fuertes) y los enlaces blandos (también conocidos como simbólicos o débiles).
 
-### Enlaces duros
+## Enlaces duros
 
-#### ¿Qué son?
+### ¿Qué son?
 
 El término hace referencia a aquellos archivos que apuntan al mismo contenido en la unidad de almacenamiento que un archivo de origen, disponiendo ambos del mismo inodo (número identificativo que tiene asignado cada fichero y carpeta). 
 En resumen, se trata de un archivo (archivo original, con un inodo único) que se identifica con varios nombres. De esta forma cualquier cambio que se realice utilizando cualquiera de los nombres quedará reflejado en el archivo.
@@ -276,7 +276,7 @@ En la siguiente imagen se puede apreciar lo anteriormente explicado:
   
   ![](assets/img/1.jpg)
   
-#### ¿Cómo se crean? 
+### ¿Cómo se crean? 
 
 Este tipo de enlaces se crean con el siguiente comando:
 
@@ -288,15 +288,15 @@ Se puede comprobar que dos archivos son enlaces físicos examinando su inodo med
 
 	ls -i
 
-### Enlaces blandos
+## Enlaces blandos
 
-#### ¿Qué son?
+### ¿Qué son?
 
 Los enlaces simbólicos son lo más similar a los accesos directos en Windows, ya que a diferencia de los enlaces duros estos apuntan al nombre de un archivo y este archivo apunta al contenido almacenado en la unidad de almacenamiento, como es apreciable en la siguiente imagen explicativa:  
   
   ![](assets/img/2.jpg)
     
-####   ¿Cómo se crean? 
+###   ¿Cómo se crean? 
 
 Este tipo de enlaces se crean con el mismo comando que el visto anteriormente pero añadiendo el parámetro ‘-s’. En este caso se pueden especificar directorios diferentes (atención al uso de rutas relativas en el destino).
 
@@ -306,29 +306,29 @@ Ejemplos:
 	‘ln -s /home/usuario/examples /home/usuario/Escritorio/ejemplos’, 
 	‘ln -s /home/usuario/examples ../ejemplos’.
 
-## 6. Estructura de directorios del sistema operativo
+# 6. Estructura de directorios del sistema operativo
 
 Existen varios tipos de directorios en Linux
 
-### Directorios compatibles
+## Directorios compatibles
 
 Son aquellos que se pueden acceder desde distintos equipos
 
 	Ej.: /var/mail, /opt, /home, /var/www/html, /usr
 
-### Directorios no compatibles
+## Directorios no compatibles
 
 Son aquellos directorios que no se pueden compartir y su acceso y modificación están limitados al administrador del sistema
 
 	Ej.: /etc, /boot, /var/run
 
-### Directorios variables
+## Directorios variables
 
 Son aquellos directorios que pueden ser modificados y pueden variar su contenido sin la intervención del administrador del sistema
 
 	Ej.: /var/log/messages, /var/mail, /var/spool/news, /home, /var/run
 
-### Directorios estáticos
+## Directorios estáticos
 
 Son aquellos directorios que contienen archivos que solo pueden ser modificados con la intervención del sistema
 
@@ -336,85 +336,85 @@ Son aquellos directorios que contienen archivos que solo pueden ser modificados 
 
 Los directorios mas destacables son:
 
-### Directorio raíz (/)
+## Directorio raíz (/)
 
 Es el directorio principal, desde aquí se ramifican todos los directorios
 
-### Directorio /bin
+## Directorio /bin
 
 Se almacenan los datos ejecutables necesarios para el funcionamiento del sistema
 
-### Directorio /boot
+## Directorio /boot
 
 En el se encuentran todos los archivos necesarios para que el ordenador arranque, salvo los archivos de configuración
 
-### Directorio /dev
+## Directorio /dev
 
 Aquí se almacenan los datos acerca de nuestro hardware
 
-### Directorio /etc
+## Directorio /etc
 
 Contiene los archivos de configuración del sistema operativo
 
-### Directorio /home
+## Directorio /home
 
 Aquí se encuentran alojados todos los archivos personales de cada usuario
 
-### Directorio /lib
+## Directorio /lib
 
 Contiene bibliotecas compartidas para ejecutar binarios de los directorios /bin y /sbin
 
-### Directorio /mnt
+## Directorio /mnt
 
 Aquí se encuentran los puntos de montaje de distintos dispositivos de almacenamiento (generalmente discos duros y particiones)
 
-### Directorio /media
+## Directorio /media
 
 Aquí se encuentran los puntos de montaje de distintos dispositivos de almacenamiento (generalmente memorias USB, lectores CD-ROM o similares)	
 
-### Directorio /opt
+## Directorio /opt
 
 Aquí se almacenan los programas que no vienen por defecto con el sistema operativo
 
-### Directorio /proc
+## Directorio /proc
 
 Se almacena información de procesos y aplicaciones en ejecución
 
-### Directorio /root
+## Directorio /root
 
 Es el directorio /home del administrador del sistema
 
-### Directorio /sbin
+## Directorio /sbin
 
 Es la variante root del directorio /bin
 
-### Directorio /srv
+## Directorio /srv
 
 Se almacenan datos que usan x servidores que se encuentren instalados en el equipo
 
-### Directorio /tmp
+## Directorio /tmp
 
 Se almacenan archivos temporales de programas que posteriormente son eliminados por el sistema operativo
 
-### Directorio /usr
+## Directorio /usr
 
 Contiene la gran mayoría de programas instalados en el sistema
 
-### Directorio /var
+## Directorio /var
 
 Contiene datos variables y temporales de los registros del sistema (Logs)
 
-### Directorio /sys
+## Directorio /sys
 
 Contiene información similar al directorio /proc, aquí encontramos información sobre el kernel del sistema
 
-### Directorio /lost+found
+## Directorio /lost+found
 
 Aquí se encuentran archivos y ficheros necesarios para recuperar datos en caso de una posible caída del sistema operativo
 
-## 7. Búsqueda de información del sistema mediante comandos.
+# 7. Búsqueda de información del sistema mediante comandos.
 
-### Información del sistema (software)
+## Información del sistema (software)
 
 Para mostrar Información del sistema podemos usar el siguiente comando:
 
@@ -428,14 +428,14 @@ Para mostrar información relacionada con la configuración de red usamos el sig
 	
 	ifconfig
 	
-### Información del sistema (hardware)
+## Información del sistema (hardware)
 
 Para mostrar un listado con los componentes físicos usamos el siguiente comando:
 
 	sudo lshw	
 
 
-## 8.Identificación del software instalado
+# 8.Identificación del software instalado
 
 Si queremos saber los programas que tenemos instalados en nuestro Ubuntu tan solo tenemos que abrir una Terminal y escribir el siguiente comando:
 
@@ -446,7 +446,7 @@ Dependiendo la version, te aparecera una lista con todos los programas o solo lo
 Ademas del uso del comando anterior, se pueden ver entrando en el icono de software de Ubuntu y podemos añadir filtros. En esa misma pantalla hay un boton ‘Instaladas’ que, si pulsamos, nos mostrara las aplicaciones instaladas en el pc.
 
 
-## 9.Montaje y desmontaje del dispositivo del sistema operativo
+# 9.Montaje y desmontaje del dispositivo del sistema operativo
 
 Para montar y desmontar un dispositivo de Linux, se puede hacer de 2 formas distintas, grafica y manualmente.
 
@@ -454,17 +454,17 @@ Para montar y demontar un disco graficamente, solo necesitamos entrar en ‘Disc
 
 Para montar/desmontar manualmente, abriremos el terminal y seguiremos la guia del siguiente video:
 
-#### Haz click en la imagen ༼ つ ◕_◕ ༽つ
+## Haz click en la imagen ༼ つ ◕_◕ ༽つ
 
 [![No furula :(](https://img.youtube.com/vi/TO7SrGv2RWk/0.jpg)](https://www.youtube.com/watch?v=TO7SrGv2RWk)
 
 
 
 
-## 10. Permisos
+# 10. Permisos
 
 
-### ¿Cómo funcionan los permisos en Linux?
+## ¿Cómo funcionan los permisos en Linux?
 En Linux todos los ficheros y directorios pertenecen a un usuario y al grupo primario del mismo (es decir, cuando se crea un fichero o directorio este pertenece al usuario creador y a su grupo principal).
 Cuando visualizamos la información de permisos sobre un fichero (con comando de listado como ‘ls -l’, los cuales se explican en el apartado 4) se nos mostrará como se puede observar en el siguiente ejemplo:
   
@@ -485,7 +485,7 @@ Entre octal y binario la equivalencia y la lectura será de la siguiente manera:
 ![](assets/img/8.jpg)
 
 
-### Gestión de permisos 
+## Gestión de permisos 
 Aunque la gestión de permisos en Linux se puede realizar de forma gráfica nos vamos a centrar en la gestión mediante el uso de comandos en la terminal, entre estos cabe destacar los siguientes comandos:
 
 	chmod (change mode)
@@ -512,7 +512,7 @@ Ejemplo: ‘chgrp delincuentes pruebas’ (al fichero ‘pruebas’ le hemos asi
 Cuando se crea un nuevo fichero a este se le es asignado una serie de permisos de manera automática (debido a la máscara de permisos, la cual se los asigna con el valor octal a la hora de aplicarlos).
 Este comando nos permitirá conocer el valor por defecto de dicha máscara y en caso de querer modificarlo solo tendremos que insertar un valor en octal después de la instrucción (ejemplo: ‘umask 057’).
 
-## 11. Ficheros de logs y de configuración del sistema
+# 11. Ficheros de logs y de configuración del sistema
 
 El sistema de logs se inicia con el siguiente script ubicado en:
 	
@@ -539,7 +539,7 @@ Estos también se pueden visualizar mediante un entorno gráfico, para ello exis
 Algunos ejemplos son KSystemLog (Es el monitor de logs del entorno de escritorio KDE), GNOME-System-Log (monitor de logs del entorno de escritorio GNOME), XLogmaster (monitor de logs de GNU) y Xwatch (monitor de logs para las librerías X)
 
 
-## 12.Administracion de usuarios y grupos
+# 12.Administracion de usuarios y grupos
 
 Para crear usuarios en Linux necesitaremos el comando useradd, escribiendo en el terminal:
 
@@ -574,7 +574,7 @@ Para añadir o eliminar usuarios del grupo, se utilizaran los comandos:
 	sudo adduser juan profesores
 	sudo deluser juan profesores
 
-## 13. Compresión/Descompresión y empaquetado/desempaquetado de datos.
+# 13. Compresión/Descompresión y empaquetado/desempaquetado de datos.
 La compresion y descompresion de datos, reduce el tamaño de los archivos. Se utiliza el fichero gz.
 Para comprimir ficheros, se utiliza el siguiente comando: gzip -9 fichero
 -9: le indica a gz que utilice el mayor factor de compresión posible.
@@ -594,7 +594,7 @@ Para ver el fichero se utiliza el comando: tar -tf   archivo.tar
 -t: Lista el contenido del fichero .tar
 -f: indica a tar que el siguiente argumento es el nombre del fichero a ver
 
-## 14. Programar tareas con Cron.
+# 14. Programar tareas con Cron.
 El comando crontab se utiliza para programar la ejecución de otros comandos. 
 · Para ver los crontabs se utilizara este código: sudo crontab -l
 · Para editar los crontabs se utilizara este código: sudo crontab -e
@@ -607,7 +607,7 @@ El 1º * significa los mes: de 1 a 12.
 El 1º * significa los días de la semana: de 1 a 6.(Domingo 0)
 
 
-## 15. Procesos, tipos, estados & estructura.
+# 15. Procesos, tipos, estados & estructura.
 Podríamos definir a los procesos como programas que están corriendo en nuestro Sistema Operativo. Se pueden clasificar en tres grandes categorías:
 Procesos Normales: son lanzados en una terminal (tty) Y corren a nombre de un usuario.
 Procesos Daemon: corren a nombre de un usuario y no tienen salida directa por una terminal, es decir corren en 2º plano.
@@ -625,7 +625,7 @@ ESTRUCTURA:
 
 ![](assets/img/9.jpg)
 
-## 16.Monitorización de aplicaciones y procesos.
+# 16.Monitorización de aplicaciones y procesos.
 
 La monitorización de aplicaciones y procesos en Linux se puede realizar de forma gráfica mediante el uso de diferentes softwares aunque en este apartado vamos a analizar los diferentes comandos que nos ofrece el sistema para realizar esta tarea.
 Estos comandos son:
