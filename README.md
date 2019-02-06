@@ -4,6 +4,7 @@
 
 Esto es una página HTML alojada gratuitamente sin haber escrito ni una sola linea de HTML, CSS o JS
 
-## ¿Cómo es posible?
+## ¿Que tipo de brujería es esta?
 
-Fácil, GitHub cuenta con una función llamada GitHub Pages, la cual 
+No es brujería (creo), GitHub cuenta con una función llamada GitHub Pages, la cual permite crear páginas web tomando como contenido tu documentación perteneciente al proyecto en el que crees la página.
+Las páginas se generan usando Jekyll, esta es una herramienta que genera páginas web utilizando Markdown como forma de añadir contenido.
