@@ -1,9 +1,3 @@
----
-layout: default
-title: Introducción
-nav_order: 0
----
-
 # Introducción
 
 ## ¿Qué es esto?
